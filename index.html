@@ -5,8 +5,6 @@
     <title>Giffabet</title>
     <link rel="stylesheet" href="style.css">
 
-
-
   </head>
   <body>
     <div class="container--get--word">
@@ -22,11 +20,13 @@
         <input
           type="text"
           class="wordInput"
+          id="wordInput"
           name="word"
           placeholder="whats the word?"
         >
 
         <button
+          id="submit"
           name="submit"
           type="submit"
         >
@@ -37,10 +37,15 @@
 
     </div>
 
-    <div class="container--show--animation">
+    <div class="bodymovin" id="letter--all">
+      <span id="letter">
+      </span>
     </div>
 
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
     <script src="bodymovin.js"></script>
     <script src="app.js"></script>
+
   </body>
 </html>

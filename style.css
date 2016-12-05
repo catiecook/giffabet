@@ -37,3 +37,13 @@ body {
    border: none;
    border-radius: 5%;
  }
+
+ #letter {
+   margin-top: 5%;
+   display: flex;
+   justify-content: center;
+ }
+
+ .single--letter {
+   width: 20%;
+ }
