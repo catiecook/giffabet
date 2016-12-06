@@ -31,19 +31,44 @@ body {
    width: 70%;
  }
 
- button {
+ .submit {
    background-color: lightblue;
    padding: 2.2%;
    border: none;
    border-radius: 5%;
  }
 
+a {
+  margin-left: 5%;
+  margin-top: 5%;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: pink;
+}
+
+.share {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 80%;
+}
+
  #letter {
    margin-top: 5%;
+   /*height: 200px;*/
+   max-width: 700px;
    display: flex;
    justify-content: center;
  }
 
  .single--letter {
    width: 20%;
+ }
+
+ .letter--empty {
+   width: 80px;
+   height: 160px;
  }
