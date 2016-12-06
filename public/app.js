@@ -1,29 +1,37 @@
+$('#share').hide();
+
 $("#submit").click((event)=> {
   event.preventDefault();
 
   var stringWord = $('#wordInput').val()
 
-  var $letterSpan = $('<span>', {
-    "class": "single--letter"
-  })
+  var $emptyLetter = $('<div />', {
+    "class": "letter--empty"
+  });
 
   var letters = []
 
   getSingleLetters(stringWord)
   animateLetters(letters)
-
+  $('#share').show();
 //**********************
 //* get single letters
   function getSingleLetters(stringWord) {
-    var singles = stringWord.split('')
-    letters = singles;
+    var lowercase = stringWord.toLowerCase()
+    letters = lowercase.split('')
   }
   //the letters array is set with the single letters from the word
 
 //**********************
 //* get JSON data
   function getAnimationData(letter) {
-    return $.get('https://giffabet.herokuapp.com/' + letter)
+      if(letter === " "){
+        letter = '-'
+        return $.get('https://giffabet.herokuapp.com/' + letter)
+      }
+      else {
+        return $.get('https://giffabet.herokuapp.com/' + letter)
+      }
   }
   //function takes in all letters entered by user, and returns the json data in a promise
 
@@ -36,7 +44,6 @@ $("#submit").click((event)=> {
       var letter = arr[i]
 
       allData.push(getAnimationData(letter)) //push all json data into array called allData
-
     } //end for loop
     Promise.all(allData) //get allData
     .then((data) => { //then loop through array data
@@ -54,6 +61,7 @@ $("#submit").click((event)=> {
       }
     })
     $('#letter').empty();
+    $('#wordInput').innerHTML="";
   }//end function
 
 }); //end click event

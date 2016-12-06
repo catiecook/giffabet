@@ -1,0 +1,23 @@
+{
+  "name": "animated",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catiecook/giffabet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catiecook/giffabet/issues"
+  },
+  "homepage": "https://github.com/catiecook/giffabet#readme",
+  "dependencies": {
+    "gif.js": "^0.1.6"
+  }
+}
